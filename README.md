@@ -47,8 +47,7 @@ You can **download** either:
 First, click on **wisielec.py** to go to the specific file. Then, click on **Raw** to open the raw source code. Then, you can copy and save it into a new file.
 ![alt text](https://i.imgur.com/3KUxp5e.png "pic1")
 
-- or **a ZIP file containing the Python file
-and the documentation** (which you are currently reading).
+- or **a ZIP file containing the Python file** (the source code), **a Markdown file** (which you are currently reading) and **a text file** (containing a list of words which you can use to play the game).
 ![alt text](https://i.imgur.com/HKukWP5.png "pic2")
 
 
@@ -92,11 +91,16 @@ If you want to **see the winners**, choose **3**.
 - Choose **1** if you want to get a word from your own .txt file.
 - Choose **2** if you wan to get a random word from the program.
 
-#### If you choose 1 to get a word from a .txt file, the program will ask you to enter the full path to the .txt file.
-After you enter it, you can start guessing!
-![alt text](https://i.imgur.com/Hw5xhLZ.png
- "pic5")
- 
+#### If you choose 1 to get a word from a .txt file, the program will ask you to enter the path or name of the .txt file. 
+
+- You can either write the full path to the file.
+- Or use **cd** and **ls** commands to get to the file's directory. If you are in the same directory as the file, type only the name of the file.
+
+After the program recognises your file, you can start guessing!
+
+- It is worth mentioning that in the repository, there is a .txt file included. You can use it for the game!
+
+  
  Now, you need to enter one letter to check if it is in the word.
  - If you guess corretly, you should see congratulations:
  
@@ -147,5 +151,5 @@ If you choose this option, you will have to select a language:
 
 After you choose a category, you can start guessing! Good luck!
 
-Last thing you should know is that if you choose a wrong option by mistake, you can always go back by typing **wstecz**!
+- Last thing you should know is that if you choose a wrong option by mistake, you can always go back by typing **wstecz**!
 
