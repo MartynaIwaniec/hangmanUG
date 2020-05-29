@@ -191,24 +191,28 @@ def selectWord():
     if user_choice == "wstecz":
         main_menu()
     elif user_choice == "1":
-        f = "C:\\Users\marty\OneDrive\Pulpit\positive-words.txt"
-        #f = input("\nProszę wpisać pełną ścieżkę do pliku, z którego pochodzić będzie hasło.\n> ")
-        file = open(f, 'r')
-        words = file.readlines()
-        my_word = ''
-
-        while len(my_word) < 3:
-            my_word = random.choice(words)
-        my_word = str(my_word).strip('[]')
-        my_word = str(my_word).strip('-')
-        my_word = str(my_word).strip('-')
-        my_word = str(my_word).strip('\"')
-        my_word = str(my_word).strip("\'\'")
-        my_word = str(my_word).strip("''")
-        my_word = str(my_word).strip("\n")
-        my_word = str(my_word).strip("\r")
-        my_word = my_word.lower()
-        return my_word
+        
+        f = input("""\nProszę wpisać pełną ścieżkę do pliku, z którego pochodzić będzie hasło."
+                  \n Uwaga! Zalecane jest używanie podwójnych slashy.\n Np. 'C:\\Users\\jan\\OneDrive\Desktop\\words.txt'\n > """)
+        try:
+            file = open(f, 'r')
+            words = file.readlines()
+            my_word = ''
+            while len(my_word) < 3:
+                my_word = random.choice(words)
+            my_word = str(my_word).strip('[]')
+            my_word = str(my_word).strip('-')
+            my_word = str(my_word).strip('-')
+            my_word = str(my_word).strip('\"')
+            my_word = str(my_word).strip("\'\'")
+            my_word = str(my_word).strip("''")
+            my_word = str(my_word).strip("\n")
+            my_word = str(my_word).strip("\r")
+            my_word = my_word.lower()
+            return my_word
+        except:
+            print("\nBłąd!\n")
+            selectWord()
 
     elif user_choice == "2":
         time.sleep(1)
