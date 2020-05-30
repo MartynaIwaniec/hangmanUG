@@ -12,7 +12,7 @@ If you know how to run Python scripts on Linux, go straight to **Step 4**!
 **Step 3** Run the program.
 **Step 4** Play hangman.
 
-# Step 1
+# Step 1 Getting ready
 
 Linux distributions may include an outdated version of Python (Python 2), but you should install an updated one (Python 3)
 
@@ -36,26 +36,25 @@ More details on Python can be found on the [official Python page](https://www.py
 and on its [Wikipedia page](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
 
-# Step 2
+# Step 2 Download the files from Github
 Now, you need to download the source code of the Python program you want to run from Github.
 
 ##### [Click to go to the Github repository.](https://github.com/MartynaIwaniec/wisielecUG)
 
 You can **download** either:
-- **a single Python source code** file
-(with extension ".py")
+- **a single Python source code** file (with extension **.py**)
 First, click on **wisielec.py** to go to the specific file. Then, click on **Raw** to open the raw source code. Then, you can copy and save it into a new file.
-![alt text](https://i.imgur.com/3KUxp5e.png "pic1")
+![alt text](https://i.imgur.com/kKYrHvP.png "pic1")
 
-- or **a ZIP file containing the Python file** (the source code), **a Markdown file** (which you are currently reading) and **a text file** (containing a list of words which you can use to play the game).
-![alt text](https://i.imgur.com/HKukWP5.png "pic2")
+- or **a ZIP file containing the Python file** (the source code), **a Markdown file** (which you are currently reading) and two **text files** (containing a list of words which you can use to play the game).
+![alt text](https://i.imgur.com/vqWjz8V.png "pic2")
 
 
-- It is also possible to access the source code with **git** command. To find out more, go to [Github page]( https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository )!
+- It is also possible to access the source code with **git** command. To find out more, go to [Github]( https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository )!
 
 When you have cloned the .py file, go to the next step.
 
-# Step 3
+# Step 3 Run the programe in the terminal
 - Locate where the dowloaded file is located. You may have to unpack it. When you find out the path to the .py file, open up the terminal.
 
 - You can write **ls** in which directory you are. Use the **cd** command to get to the directory with the .py file in it.
@@ -67,7 +66,7 @@ Write **chmod a+x in the terminal).
 
 Now you can finally play the game!
 
-# Step 4
+# Step 4 Start playing
 When you've sucessfully run the program, you should see the main manu:
 ![alt text](https://i.imgur.com/VUsnxXw.png "pic3")
 
@@ -152,4 +151,3 @@ If you choose this option, you will have to select a language:
 After you choose a category, you can start guessing! Good luck!
 
 - Last thing you should know is that if you choose a wrong option by mistake, you can always go back by typing **wstecz**!
-
