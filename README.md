@@ -3,7 +3,7 @@ The program is for Python programming course.
 Documentation is for technical writing task.
 
 # Overview
-This document will explain step-by-step how to run the program game.py on **Linux Ubuntu** in 4 simple steps.
+This document will explain step-by-step how to run and play the program wisielec.py on **Linux** (Ubuntu) in 4 simple steps.
 
 - If you already know how to run Python scripts on Linux, go straight to **Step 4**!
 
