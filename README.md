@@ -8,9 +8,13 @@ This document will explain step-by-step how to run the program game.py on **Linu
 If you know how to run Python scripts on Linux, go straight to **Step 4**!
 
 **Step 1** Make sure Python 3 is installed on your computer or install it.
+
 **Step 2** Download the source code from a GitHub repository.
+
 **Step 3** Run the program.
+
 **Step 4** Play hangman.
+
 
 # Step 1 Getting ready
 
@@ -30,7 +34,8 @@ Linux distributions may include an outdated version of Python (Python 2), but yo
 - If your version is Python 3.7.x (x stands for the revision level and could change as new releases come out), go to **Step 2**.
 
 - To **install** Python 3 by writing **sudo apt-get install python3** in the terminal or go to https://www.python.org/downloads/ 
-If you are a beginner, I reccomend reading the guide https://wiki.python.org/moin/BeginnersGuide as well.
+
+If you are a beginner, reading the following guide is recommended https://wiki.python.org/moin/BeginnersGuide as well.
 
 More details on Python can be found on the [official Python page](https://www.python.org/about/)
 and on its [Wikipedia page](https://en.wikipedia.org/wiki/Python_(programming_language)).
