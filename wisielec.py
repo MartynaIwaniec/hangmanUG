@@ -17,7 +17,6 @@ def main_menu():
 def play():
     user_input = input()
     print("Wybrałeś:", user_input)
-    time.sleep(1)
     if user_input == "1":
         hangman()
     elif user_input == "2":
@@ -28,7 +27,6 @@ def play():
             print_winners()
         except FileNotFoundError:
             print("\nNie ma jeszcze żadnych wyników na liście zwycięzców!\nZagraj w grę, by dostać się na listę!")
-            time.sleep(1)
             yes_no()
     else:
         print("\nBłąd! Niepoprawny wybór!")
@@ -36,10 +34,10 @@ def play():
 
 
 def graphics(guesses, answer):
-    if (guesses == 0):
+    if guesses == 0:
         print('\n')
 
-    elif (guesses == 1):
+    elif guesses == 1:
         print("""
 
 
@@ -50,7 +48,7 @@ def graphics(guesses, answer):
                    | ____________|
 
                     """)
-    elif (guesses == 2):
+    elif guesses == 2:
         print("""
                            ____
                           |    |
@@ -64,7 +62,7 @@ def graphics(guesses, answer):
                        | ____________|
 
                         """, )
-    elif (guesses == 3):
+    elif guesses == 3:
         print("""
                            ____
                           |    |
@@ -78,7 +76,7 @@ def graphics(guesses, answer):
                        | ____________|
 
                          """)
-    elif (guesses == 4):
+    elif guesses == 4:
         print("""
                            ____
                           |    |
@@ -95,7 +93,7 @@ def graphics(guesses, answer):
 
         print("*** Pamiętaj, że w dowolnym momencie możesz poprosić o podpowiedź wpisując 'pomoc' ***\n")
 
-    elif (guesses == 5):
+    elif guesses == 5:
         print("""
                            ____
                           |    |
@@ -109,7 +107,7 @@ def graphics(guesses, answer):
                        | ____________|
 
                         """)
-    elif (guesses == 6):
+    elif guesses == 6:
         print("""
                            _____
                           |     |
@@ -126,7 +124,7 @@ def graphics(guesses, answer):
 
         print("*** Pamiętaj, że w każdej chwili możesz poprosić o podpowiedź wpisując 'pomoc' ***\n")
 
-    elif (guesses == 7):
+    elif guesses == 7:
         print("""
                            _____
                           |     |
@@ -141,7 +139,7 @@ def graphics(guesses, answer):
 
                         """)
 
-    elif (guesses == 8):
+    elif guesses == 8:
         print("""
                                _____
                               |     |
@@ -155,12 +153,10 @@ def graphics(guesses, answer):
                            | ____________|
             \n
                             """)
-        time.sleep(1)
         print("\nHasło brzmiało: " + answer.upper() + "\n")
-        time.sleep(1)
         print("\nPrzegrałeś :( \n")
         yes_no()
-        return
+        #return
 
 
 pl_animals = ['piesek', 'żyrafa', 'tygrys', 'jaskółka', 'hipopotam', 'tygrys', 'szympans', 'krokodyl', 'delfin',
@@ -185,14 +181,11 @@ ger_jobs = ['bauer', 'anwalt', 'ingenieur', 'lehrerin', 'kellner', 'pilot', 'ric
             'architektin', 'schriftsteller', 'friseur']
 
 
-def select_word():
-    print("\nCzy chcesz wgrać plik .txt czy użyć jednego z domyślnych słów? Wprowadź odpowiednią cyfrę.\n")
-    time.sleep(1)
-    user_choice = input("[1] Mój plik .txt \n[2] Gotowe losowe hasło \n> ")
-    if user_choice == "wstecz":
-        main_menu()
-    elif user_choice == "1":
-        f = input("\nProszę wpisać ścieżkę lub nazwę pliku, z którego program wylosuje hasło.\n> ")
+def from_file():
+    f = input("\nProszę wpisać ścieżkę lub nazwę pliku, z którego program wylosuje hasło.\n> ")
+    if f == "wstecz":
+        select_word()
+    else:
         try:
             file = open(f, 'r')
             words = file.read().replace('\n', ' ').split(' ')[:-1]
@@ -211,81 +204,88 @@ def select_word():
             return my_word
         except FileNotFoundError:
             print("\nBłąd!\n")
-            select_word()
+            from_file()
         except EOFError:
             print("\nBłąd!\n")
-            select_word()
+            from_file()
         except OSError:
             print("\nBłąd!\n")
-            select_word()
+            from_file()
         except TypeError:
             print("\nBłąd!\n")
-            select_word()
+            from_file()
         except AssertionError:
             print("\nBłąd!\n")
+            from_file()
+
+def from_list():
+    print("\nJaki język wybierasz?\n")
+    word = None
+    language = input("Wprowadź odpowiednią cyfrę.\n [1] Polski \n [2] Angielski \n [3] Niemiecki \n> ")
+    if language == "wstecz":
+        select_word()
+    elif language == "1":
+        print("\nUwaga! Pamiętaj, że w przygotowanych hasłach występują polskie znaki!\n")
+        print("Jaką kategorię wybierasz?\n")
+        category = input("Wprowadź odpowiednią cyfrę.\n [1] zwierzątka \n [2] owoce \n [3] zawody\n> ")
+        if category == "wstecz":
             select_word()
-    elif user_choice == "2":
-        time.sleep(1)
-        print("\nJaki język wybierasz?\n")
-        time.sleep(1)
-        word = None
-        language = input("Wprowadź odpowiednią cyfrę.\n [1] Polski \n [2] Angielski \n [3] Niemiecki \n> ")
-        if language == "wstecz":
+        elif category == "1":
+            word = random.choice(pl_animals)
+            word = word.lower()
+        elif category == "2":
+            word = random.choice(pl_fruit)
+            word = word.lower()
+        elif category == "3":
+            word = random.choice(pl_jobs)
+            word = word.lower()
+        return word
+    elif language == "2":
+        print("\nJaką kategorię wybierasz?\n")
+        category = input("Wprowadź odpowiednią cyfrę.\n [1] animals \n [2] fruit \n [3] jobs\n> ")
+        if category == "wstecz":
             select_word()
-        elif language == "1":
-            print("\nUwaga! Pamiętaj, że w przygotowanych hasłach występują polskie znaki!\n")
-            time.sleep(1)
-            print("Jaką kategorię wybierasz?\n")
-            time.sleep(1)
-            category = input("Wprowadź odpowiednią cyfrę.\n [1] zwierzątka \n [2] owoce \n [3] zawody\n> ")
-            if category == "wstecz":
-                select_word()
-            elif category == "1":
-                word = random.choice(pl_animals)
-                word = word.lower()
-            elif category == "2":
-                word = random.choice(pl_fruit)
-                word = word.lower()
-            elif category == "3":
-                word = random.choice(pl_jobs)
-                word = word.lower()
-            return word
-        elif language == "2":
-            print("\nJaką kategorię wybierasz?\n")
-            time.sleep(1)
-            category = input("Wprowadź odpowiednią cyfrę.\n [1] animals \n [2] fruit \n [3] jobs\n> ")
-            if category == "wstecz":
-                select_word()
-            elif category == "1":
-                word = random.choice(eng_animals)
-                word = word.lower()
-            elif category == "2":
-                word = random.choice(eng_fruit)
-                word = word.lower()
-            elif category == "3":
-                word = random.choice(eng_jobs)
-                word = word.lower()
-            return word
-        elif language == "3":
-            print("\nJaką kategorię wybierasz?\n")
-            time.sleep(1)
-            category = input("Wprowadź odpowiednią cyfrę.\n [1] Tiere\n [2] Obst\n [3] Beruf\n> ")
-            if category == "wstecz":
-                select_word()
-            elif category == "1":
-                word = random.choice(ger_animals)
-                word = word.lower()
-            elif category == "2":
-                word = random.choice(ger_fruit)
-                word = word.lower()
-            elif category == "3":
-                word = random.choice(ger_jobs)
-                word = word.lower()
-            return word
-        else:
+        elif category == "1":
+            word = random.choice(eng_animals)
+            word = word.lower()
+        elif category == "2":
+            word = random.choice(eng_fruit)
+            word = word.lower()
+        elif category == "3":
+            word = random.choice(eng_jobs)
+            word = word.lower()
+        return word
+    elif language == "3":
+        print("\nJaką kategorię wybierasz?\n")
+        category = input("Wprowadź odpowiednią cyfrę.\n [1] Tiere\n [2] Obst\n [3] Beruf\n> ")
+        if category == "wstecz":
             select_word()
+        elif category == "1":
+            word = random.choice(ger_animals)
+            word = word.lower()
+        elif category == "2":
+            word = random.choice(ger_fruit)
+            word = word.lower()
+        elif category == "3":
+            word = random.choice(ger_jobs)
+            word = word.lower()
+        return word
     else:
-        time.sleep(1)
+        from_list()
+
+
+def select_word():
+    print("\nCzy chcesz wgrać plik .txt czy użyć jednego z domyślnych słów? Wprowadź odpowiednią cyfrę.\n")
+    user_choice = input("[1] Mój plik .txt \n[2] Gotowe losowe hasło \n> ")
+    if user_choice == "wstecz":
+        main_menu()
+    elif user_choice == "1":
+        ff = from_file()
+        return ff
+    elif user_choice == "2":
+        fl = from_list()
+        return fl
+    else:
         print("\nBłąd! Wprowadź swój wybór ponownie!\n")
         select_word()
 
@@ -300,13 +300,10 @@ def hangman():
         new_blanks_list = list(blanks)
         guess_list = []
         print("Zaczynamy grę!\n")
-        time.sleep(1)
         print("*** Pamiętaj, że w każdej chwili możesz poprosić o podpowiedź wpisując 'pomoc' ***\n")
         graphics(guesses, w)
         print("\n" + "" + ' '.join(blanks_list) + "\n")
-        time.sleep(1)
         print("Wpisz literę!\n")
-
         while guesses < 8:
             guess = str(input("\n> "))
             guess = guess.lower()
@@ -333,6 +330,8 @@ def hangman():
                     print("\n\t\tPrzedostatnia litera to: " + w[-2])
                 elif w[-1] not in guess_list:
                     print("\n\t\tOstatnia litera to: " + w[-1])
+            elif guess == "wstecz":
+                select_word()
             elif len(guess) > 1:
                 print("\t\tWpisz tylko jedną literę!\n")
             elif guess == "":
@@ -362,16 +361,15 @@ def hangman():
 
                     if w_list == blanks_list:
                         print("\n\t\tBrawo! Wygrałeś!")
-                        time.sleep(1)
                         name = str(input("\nPodaj swoje imię: "))
                         get_winner(name)
                         print("\n")
-                        time.sleep(1)
                     else:
                         x = ["Dobry strzał! Zgaduj dalej!", "Oby tak dalej!", "Wyśmienicie :)",
                              "Super! Jesteś już blisko zwycięstwa!"]
                         print("\n\n\t\t", random.choice(x))
     except TypeError:
+        print("Nieoczekiwany błąd! ")
         hangman()
 
 
@@ -392,33 +390,26 @@ def print_winners():
     for i in winners:
         print(i)
     f.close()
-    time.sleep(2)
+    time.sleep(1)
     yes_no()
 
 
 def yes_no():
     print("\nCzy chcesz zagrać nową rozgrywkę? Wybierz odpowiednią cyfrę.")
-    time.sleep(1)
     print("\n[1] Tak \n[2] Nie \n> ")
-    time.sleep(1)
     again = str(input())
     if again == "1":
         hangman()
     elif again == "2":
-        time.sleep(1)
         print("Dzięki za grę! Miłego dnia!")
-        time.sleep(1)
         quit()
     else:
-        time.sleep(1)
         print("Wprowadź poprawną cyfrę.")
-        time.sleep(1)
         yes_no()
 
 
 def main():
     main_menu()
-    time.sleep(1)
     hangman()
 
 
