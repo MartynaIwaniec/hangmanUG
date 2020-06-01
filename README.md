@@ -115,9 +115,13 @@ After the program recognises your file, you can start guessing!
  
 - If you enter a letter which you have already guessed, you will see **Już użyłeś tej litery! Wpisz nową!** as well as a list of the letters that you have already tried.
 
-- If you enter more than 1 letter, you will get a message saying **Wpisz tylko jedną literę.**.
+- If you enter more than 1 letter, you will get a message saying **Wpisz tylko jedną literę.**
  
- Continue to enter letters until you will see the complete world. The program will congratulate you on your win by printing **Brawo! Wygrałeś!**.
+ Continue to enter letters until you will see the complete world. The program will congratulate you on your win by printing 
+ **Brawo! Wygrałeś!**
+
+- You can also guess by typing the whole word! 
+If you guess right, you will win the game. If you guess wrong, you will see **Wpisz tylko jedną literę.**
 
 Then, the program will ask you to enter your name in order to save it to the winners list.
  ![alt text](https://i.imgur.com/6RmGuyE.png)
