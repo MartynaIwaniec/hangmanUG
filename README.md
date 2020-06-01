@@ -18,9 +18,9 @@ This document will explain step-by-step how to run and play the program wisielec
 
 # Step 1 Getting ready
 
-Linux distributions may include an outdated version of Python (Python 2), but you should install an updated one (Python 3)
+Linux distributions may include an outdated version of Python (Python 2), make sure Python 3 is installed on your machine before running the program.
 
-*Remember to be careful while using the command line, because you may accidentely damage or remove your data. Write only commands that you known exactly what is their purpose.*
+*Remember to be careful while using the command line, because you nmight accidentely damage or remove your data. Write only commands that you known exactly what is their purpose.*
 
 **Access to a command-line/terminal window on Linux:**
 
@@ -33,7 +33,7 @@ Linux distributions may include an outdated version of Python (Python 2), but yo
         
 - If your version is Python 3.7.x (x stands for the revision level and could change as new releases come out), go to **Step 2**.
 
-- To **install** Python 3 by writing **sudo apt-get install python3** in the terminal or go to https://www.python.org/downloads/ 
+- To **install** Python 3, write **sudo apt-get install python3** in the terminal or go to https://www.python.org/downloads/ 
 
 If you are a beginner, reading the following guide is recommended https://wiki.python.org/moin/BeginnersGuide as well.
 
@@ -42,30 +42,31 @@ and on its [Wikipedia page](https://en.wikipedia.org/wiki/Python_(programming_la
 
 
 # Step 2 Download the files from Github
-Now, you need to download the source code of the Python program you want to run from Github.
+Download the source code of the Python program you want to run from a Github repository.
 
 ##### [Click to go to the Github repository.](https://github.com/MartynaIwaniec/wisielecUG)
 
 You can **download** either:
 - **a single Python source code** file (with extension **.py**)
-First, click on **wisielec.py** to go to the specific file. Then, click on **Raw** to open the raw source code. Then, you can copy and save it into a new file.
+First, click on **wisielec.py** to go to the specific file. Then, click on **Raw** to open the raw source code. After that you can copy it using CTRL+C and save it into a new .py file.
 ![alt text](https://i.imgur.com/kKYrHvP.png "pic1")
 
-- or **a ZIP file containing the Python file** (the source code), **a Markdown file** (which you are currently reading) and two **text files** (containing a list of words which you can use to play the game).
+- **a ZIP file containing the Python file** (the source code), **a Markdown file** (which you are currently reading) and two **text files** (containing a list of words which you can use to play the game).
 ![alt text](https://i.imgur.com/vqWjz8V.png "pic2")
 
 
-- It is also possible to access the source code with **git** command. To find out more, go to [Github]( https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository )!
+- It is also possible to access the source code with **git clone wisielec.py** command. To find out more, go to [Github]( https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository )!
 
 When you have cloned the .py file, go to the next step.
 
 # Step 3 Run the programe in the terminal
-- Locate where the dowloaded file is located. You may have to unpack it. When you find out the path to the .py file, open up the terminal.
+- Locate where the dowloaded file is located. You may have to unpack it if you chose to download a ZIP file. 
+After you find out the path to the .py file, open up the terminal (CTRL+ALT+T).
 
-- You can write **ls** in which directory you are. Use the **cd** command to get to the directory with the .py file in it.
+- You can write **ls** to find out in which directory you currently are. Use the **cd** command to get to the directory with the .py file in it.
 You can also use the command **realpath wisielec.py** to get the full path of the .py file.
 
-- To make the script executable first, Write **chmod a+x** in the terminal).
+- To make the script executable first, Write **chmod a+x** in the terminal.
 
 - To run the program, write **python3 wisielec.py** or **./wisielec.py**
 
