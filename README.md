@@ -120,7 +120,7 @@ After the program recognises your file, you can start guessing!
  Continue to enter letters until you will see the complete world. The program will congratulate you on your win by printing **Brawo! Wygrałeś!**.
 
 Then, the program will ask you to enter your name in order to save it to the winners list.
- ![alt text](https://i.imgur.com/WS5lz7I.png "pic7")
+ ![alt text](https://i.imgur.com/6RmGuyE.png)
 
 - If you have problems with guessing the right letters, you can always use a lifeline by typing **pomoc**.
 Then, the program will give you one of the letters that you need.
