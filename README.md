@@ -63,11 +63,11 @@ When you have cloned the .py file, go to the next step.
 - Locate where the dowloaded file is located. You may have to unpack it. When you find out the path to the .py file, open up the terminal.
 
 - You can write **ls** in which directory you are. Use the **cd** command to get to the directory with the .py file in it.
+You can also use the command **realpath wisielec.py** to get the full path of the .py file.
 
-- You have to make the script executable first.
-Write **chmod a+x in the terminal).
+- To make the script executable first, Write **chmod a+x** in the terminal).
 
-- To run the program, write **./wisielec.py**
+- To run the program, write **python3 wisielec.py** or **./wisielec.py**
 
 Now you can finally play the game!
 
