@@ -289,7 +289,8 @@ def select_word():
         print("\nBłąd! Wprowadź swój wybór ponownie!\n")
         select_word()
 
-
+        
+#za dlugie
 def hangman():
     guesses = 0
     try:
@@ -330,8 +331,8 @@ def hangman():
                     print("\n\t\tPrzedostatnia litera to: " + w[-2])
                 elif w[-1] not in guess_list:
                     print("\n\t\tOstatnia litera to: " + w[-1])
-            elif guess == "wstecz":
-                select_word()
+            #elif guess == "wstecz": nie resetuje slowa
+                #select_word()
             elif guess == w:
                 print("\n\t\tBrawo! Wygrałeś!")
                 name = str(input("\nPodaj swoje imię: "))
