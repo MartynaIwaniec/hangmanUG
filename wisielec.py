@@ -190,16 +190,16 @@ def from_file():
             file = open(f, 'r')
             words = file.read().replace('\n', ' ').split(' ')[:-1]
             my_word = 'a'
-            while len(my_word) < 4:
+            while len(my_word) < 5:
                 my_word = random.choice(words)
                 my_word = str(my_word).strip('[]')
                 my_word = str(my_word).strip("''")
                 my_word = str(my_word).strip(".")
-                my_word = str(my_word).strip('"')
+                my_word = str(my_word).strip('""')
                 my_word = str(my_word).strip(",")
                 my_word = str(my_word).strip(":")
-                my_word = str(my_word).strip("\n")
-                my_word = str(my_word).strip("\r")
+                # my_word = str(my_word).strip("\n")
+                # my_word = str(my_word).strip("\r") not readlines
             my_word = my_word.lower()
             return my_word
         except FileNotFoundError:
