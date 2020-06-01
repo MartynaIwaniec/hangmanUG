@@ -332,6 +332,11 @@ def hangman():
                     print("\n\t\tOstatnia litera to: " + w[-1])
             elif guess == "wstecz":
                 select_word()
+            elif guess == w:
+                print("\n\t\tBrawo! Wygrałeś!")
+                name = str(input("\nPodaj swoje imię: "))
+                get_winner(name)
+                print("\n")
             elif len(guess) > 1:
                 print("\t\tWpisz tylko jedną literę!\n")
             elif guess == "":
