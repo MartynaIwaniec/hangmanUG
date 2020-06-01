@@ -1,6 +1,6 @@
 # wisielecUG
-The program is for Python programming course. 
-Documentation is for technical writing task.
+The program is for a Python programming course. 
+Documentation is for a technical writing task.
 
 # Overview
 This document will explain step-by-step how to run and play the program wisielec.py on **Linux** (Ubuntu) in 4 simple steps.
@@ -20,7 +20,7 @@ This document will explain step-by-step how to run and play the program wisielec
 
 Linux distributions may include an outdated version of Python (Python 2), make sure Python 3 is installed on your machine before running the program.
 
-*Remember to be careful while using the command line, because you nmight accidentely damage or remove your data. Write only commands that you known exactly what is their purpose.*
+*Remember to be careful while using the command line, because you might accidentally damage or remove your data. Write only commands that you know what is their purpose.*
 
 **Access to a command-line/terminal window on Linux:**
 
@@ -48,10 +48,10 @@ Download the source code of the Python program you want to run from a Github rep
 
 You can **download** either:
 - **a single Python source code** file (with extension **.py**)
-First, click on **wisielec.py** to go to the specific file. Then, click on **Raw** to open the raw source code. After that you can copy it using CTRL+C and save it into a new .py file.
+First, click on **wisielec.py** to go to the specific file. Then, click on **Raw** to open the raw source code. After that, you can copy it using CTRL+C and save it into a new .py file.
 ![alt text](https://i.imgur.com/kKYrHvP.png "pic1")
 
-- **a ZIP file containing the Python file** (the source code), **a Markdown file** (which you are currently reading) and two **text files** (containing a list of words which you can use to play the game).
+- **a ZIP file containing the Python file** (the source code), **a Markdown file** (which you are currently reading), and two **text files** (containing a list of words which you can use to play the game).
 ![alt text](https://i.imgur.com/vqWjz8V.png "pic2")
 
 
@@ -59,8 +59,8 @@ First, click on **wisielec.py** to go to the specific file. Then, click on **Raw
 
 When you have cloned the .py file, go to the next step.
 
-# Step 3 Run the programe in the terminal
-- Locate where the dowloaded file is located. You may have to unpack it if you chose to download a ZIP file. 
+# Step 3 Run the program in the terminal
+- Locate where the downloaded file is located. You may have to unpack it if you chose to download a ZIP file. 
 After you find out the path to the .py file, open up the terminal (CTRL+ALT+T).
 
 - You can write **ls** to find out in which directory you currently are. Use the **cd** command to get to the directory with the .py file in it.
@@ -73,7 +73,7 @@ You can also use the command **realpath wisielec.py** to get the full path of th
 Now you can finally play the game!
 
 # Step 4 Start playing
-When you've sucessfully run the program, you should see the main manu:
+When you've successfully run the program, you should see the main menu:
 ![alt text](https://i.imgur.com/VUsnxXw.png "pic3")
 
 Please make sure to follow the instructions displayed on the screen throughout the game.
@@ -86,15 +86,15 @@ If you want to **exit the game**, choose **2**.
  "pic11")
 
 If you want to **see the winners**, choose **3**.
-- If you haven't won yet, you the program will inform you that the list is empty. To get on the winners list, you have to win a game.
+- If you haven't won yet, the program will inform you that the list is empty. To get on the winners' list, you have to win a game.
 - If you won before, you should see your name on the list.
-- Then you  will be asked if you want to start a new game. If you choose **1**, a new game will start by asking you where do you want to get the word from. If you choose **2**, the program will stop.
+- Then you will be asked if you want to start a new game. If you choose **1**, a new game will start by asking you where do you want to get the word from. If you choose **2**, the program will stop.
 ![alt text](https://i.imgur.com/D8u9kL3.png)
 
 
 ## If you choose **1** to play the game:
 - Choose **1** if you want to get a word from your own .txt file.
-- Choose **2** if you wan to get a random word from the program.
+- Choose **2** if you want to get a random word from the program.
 
 #### If you choose 1 to get a word from a .txt file, the program will ask you to enter the path or name of the .txt file. 
 
@@ -107,7 +107,7 @@ After the program recognises your file, you can start guessing!
 
   
  Now, you need to enter one letter to check if it is in the word.
- - If you guess corretly, you should see congratulations:
+ - If you guess correctly, you should see congratulations:
  
 ![alt text](https://i.imgur.com/ql7o4xe.png
  "pic6")
@@ -124,7 +124,7 @@ After the program recognises your file, you can start guessing!
 - You can also guess by typing the whole word! 
 If you guess right, you will win the game. If you guess wrong, you will see **Wpisz tylko jedną literę.**
 
-Then, the program will ask you to enter your name in order to save it to the winners list.
+Then, the program will ask you to enter your name to save it to the winners' list.
  ![alt text](https://i.imgur.com/6RmGuyE.png)
 
 - If you have problems with guessing the right letters, you can always use a lifeline by typing **pomoc**.
@@ -135,14 +135,14 @@ The program will remind you about the lifeline if it notices that you are strugg
  ![alt text](https://i.imgur.com/VNF2xHF.png "pic8")
 
  
- - You should remember than every time you are wrong, the game will add a portion of the hangman. 
- You have 8 tries, until the hangman in completed.
+ - You should remember that every time you are wrong, the game will add a portion of the hangman. 
+ You have 8 tries until the hangman is completed.
 
-In the picure, first stages of the hangman are being added:
+In the picture, the first stages of the hangman are being added:
  ![alt text](https://i.imgur.com/6a9izYm.png "pic9")
 
 - When the whole hangman is completed, the game is over and you lose.
-After your 8th wrong entry, the proram will inform you that you lost and display the word that you haven't guessed.
+After your 8th wrong entry, the program will inform you that you lost and display the word that you haven't guessed.
 
 - After every game, you will be asked if you want to play again. Choose **1** to play again or **2** to exit the game.
 ![alt text](https://i.imgur.com/pDHh2Kb.png "pic10")
@@ -160,4 +160,4 @@ If you choose this option, you will have to select a language:
 
 After you choose a category, you can start guessing! Good luck!
 
-- Last thing you should know is that if you choose a wrong option by mistake, you can always go back by typing **wstecz**!
+- The last thing you should know is that if you choose the wrong option by mistake, you can always go back by typing **wstecz**!
