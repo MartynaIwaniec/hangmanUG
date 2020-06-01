@@ -80,7 +80,7 @@ Please make sure to follow the instructions displayed on the screen throughout t
 If you want to **play a new game**, choose **1**.
 ![alt text](https://i.imgur.com/Y6Dzv8X.png
  "pic12")
-If you want to *exit the game**, choose **2**.
+If you want to **exit the game**, choose **2**.
  ![alt text]( https://i.imgur.com/AADiqOw.png
  "pic11")
 
