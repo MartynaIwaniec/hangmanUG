@@ -64,9 +64,9 @@ When you have cloned the .py file, go to the next step.
 After you find out the path to the .py file, open up the terminal (CTRL+ALT+T).
 
 - You can write **ls** to find out in which directory you currently are. Use the **cd** command to get to the directory with the .py file in it.
-You can also use the command **realpath wisielec.py** to get the full path of the .py file.
+You can also use the command **realpath wisielec.py** to get the full path of the Python file.
 
-- To make the script executable first, Write **chmod a+x** in the terminal.
+- To make the script executable first, Write **chmod a+x wisielec.py** in the terminal.
 
 - To run the program, write **python3 wisielec.py** or **./wisielec.py**
 
